@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Sign Up!</h1>
+<form action="/auth/sign-up" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" required name="username" id="username" />
+  <label for="password">Password:</label>
+  <input type="password" required name="password" id="password" />
+  <label for="confirmPassword">Confirm Password:</label>
+  <input type="password" required name="confirmPassword" id="confirmPassword" />
+  <br>
+  <button type="submit">Sign up</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>

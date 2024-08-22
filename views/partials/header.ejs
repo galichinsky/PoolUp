@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav>
+    <!-- Put links that you want to display at all times
+         outside of the if/else 
+    -->
+    <a href="/">HOME</a>
+    <div>
+      <% if (user) { %>
+        <a href="/todos/new">Protected Route</a>&nbsp;&nbsp;
+        <a href="/auth/logout">LOG OUT</a>&nbsp;&nbsp;
+        <span>Wecome, <%= user.username %></span>
+      <% } else { %>
+        <a href="/auth/sign-up">SIGN UP</a>
+        <a href="/auth/login">LOG IN</a>
+      <% } %>
+      </div>
+  </nav>
+  <main>
+
