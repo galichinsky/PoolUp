@@ -9,6 +9,13 @@ router.get('/', ensureLoggedIn, async (req, res) => {
   res.render("pools/index.ejs", { pools })
 })
 
+// GET /pools/user (my pools functionality/action)
+router.get('/user', ensureLoggedIn, async (req, res) => {
+  const pools = await Pool.find({user: req.user._id})
+  res.render("pools/user.ejs", { pools })
+})
+
+
 // GET /pools/new
 router.get('/new', ensureLoggedIn, (req, res) => {
   console.log((req.params.userId));
@@ -26,5 +33,7 @@ router.post('/', async (req, res) => {
   }
   res.redirect('/pools')
 })
+
+
 
 module.exports = router;

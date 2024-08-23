@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>My Pools</h1>
+
+<% if (pools.length) { %>
+  <ul>
+    <% pools.forEach((pool) => { %>
+    <li>
+      <p>Name: <%= pool.name %></p>
+      <p>Location: <%= pool.location %></p>
+      <p>Event: <%= pool.event %></p>
+      <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
+    </li>
+    <% }); %>
+  </ul>
+  <% } else { %>
+  <h3>No Pools Yet</h3>
+  <% } %> 
+<%- include('../partials/footer.ejs') %>
