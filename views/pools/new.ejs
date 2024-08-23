@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Pool</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <h1>Create a New Pool Review</h1>
+    <form action="/pools" method="POST">
+
+        <label for="name">Pool Name:</label>
+        <input type="text" name="name" id="name" />
+        <label for="event">Event:</label>
+        <input type="text" name="event" id="event" />
+        <label for="date">Start Date:</label>
+        <input type="date" name="date" id="date" />
+        <label for="location">Pool Location:</label>
+        <input type="text" name="location" id="location" />
+        <label for="review">Review:</label>
+        <textarea name="review" id="review"></textarea>  
+        <button type="submit">Add Pool</button>
+    
+    </form>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

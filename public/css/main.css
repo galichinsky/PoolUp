@@ -55,6 +55,11 @@ form * {
   font-size: 2vmin;
   padding: 1vmin;
   border-radius: 1vmin;
+  text-decoration: none;
+}
+
+form button[type='submit'] {
+  grid-column: span 2;
 }
 
 button:hover {

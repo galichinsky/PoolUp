@@ -24,7 +24,7 @@ router.post('/sign-up', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.redirect('/');
+  res.redirect('/pools');
 });
 
 // POST /auth/login (login user)
@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
       req.session.user = { _id: user._id };
       req.session.save();
       // Perhaps update to some other functionality
-      return res.redirect('/');
+      return res.redirect('/pools');
     } else {
       return res.redirect('/auth/login');
     }
