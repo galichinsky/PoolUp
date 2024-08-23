@@ -10,6 +10,11 @@
       <p>Location: <%= pool.location %></p>
       <p>Event: <%= pool.event %></p>
       <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
+      <a href="/pools/user"> <%= pool.name %></a> ||
+          <a href="/pools/user/edit">Edit Food</a>
+          <form action="/pools?_method=DELETE" method="POST">
+              <button type="submit">❌DELETE</button>
+          </form>
     </li>
     <% }); %>
   </ul>

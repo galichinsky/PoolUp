@@ -10,6 +10,9 @@
       <p>Location: <%= pool.location %></p>
       <p>Event: <%= pool.event %></p>
       <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
+      <% if (user._id.equals(pool.user)) { %>
+       <p></p>
+      <% } %>
     </li>
     <% }); %>
   </ul>

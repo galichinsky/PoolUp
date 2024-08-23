@@ -34,6 +34,16 @@ router.post('/', async (req, res) => {
   res.redirect('/pools')
 })
 
-
+// DELETE /
+router.delete('/pool/user', async (req, res) => {
+  try {
+    const poolId = req.params.id;
+    await Pool.findByIdAndDelete(poolId);
+    res.redirect('/user')
+  } catch (error) {
+    console.log("Error: ", err);
+    res.redirect("/");
+  }
+})
 
 module.exports = router;
