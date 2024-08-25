@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-  background-color: #00796b;
+  background-color: #006b79;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -28,26 +28,28 @@ nav a {
   font-size: 1rem;
   text-decoration: none;
   color: #fff;
-  background-color: #004d40;
+  background-color: #004d9b;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #004d40;
+  background-color: #023262;
 }
 nav h1 {
-  color: black;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-decoration-color: #53b6ec;
 }
 nav span {
-  color: #85def5;
+  color: #6cc1ef;
 }
 
 footer {
-  background-color: #00796b;
+  background-color: #006b79;
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 1rem;
   font-size: 0.875rem;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
@@ -75,6 +77,8 @@ main h2 {
   padding-bottom: 5%;
   color: black;
 }
+
+
 /* Hero Section */
 #hero {
   text-align: center;
@@ -87,7 +91,7 @@ main h2 {
 #hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #004d40;
+  color: #004d9b;
 }
 
 #hero p {
@@ -99,7 +103,7 @@ main h2 {
 .cta-button {
   font-size: 1.25rem;
   color: #fff;
-  background-color: #00796b;
+  background-color: #;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -108,7 +112,7 @@ main h2 {
 }
 
 .cta-button:hover {
-  background-color: #004d40;
+  background-color: #004d9b;
 }
 
 /* Form and Buttons */
@@ -128,7 +132,7 @@ form {
 form label {
   font-size: 1rem;
   font-weight: bold;
-  color: #004d40;
+  color: #004d9b;
   margin-bottom: 0.5rem;
   text-align: left;
   width: 100%;
@@ -149,7 +153,7 @@ form input:focus {
 }
 
 button {
-  background-color: #00796b;
+  background-color: #004d9b;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -162,7 +166,7 @@ button {
 }
 
 button:hover {
-  background-color: #004d40;
+  background-color: #01366b;
 }
 
 /* Pool List */
@@ -202,7 +206,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #004d40;
+  background-color: #004d9b;
 }
 
 li form {
@@ -226,7 +230,7 @@ li button:hover {
 
 h3 {
   font-size: 1.5rem;
-  color: #004d40;
+  color: #004d9b;
   text-align: center;
 }
 
