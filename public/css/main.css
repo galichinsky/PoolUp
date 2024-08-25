@@ -11,7 +11,7 @@ body {
 }
 
 nav, footer {
-  background-color:rgb(164, 227, 230);
+  background-color:rgb(167, 236, 228);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,4 +66,19 @@ form button[type='submit'] {
 button:hover {
   background-color: lightslategray;
   color: white;
+}
+button {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  padding: 1vmin;
+  border-radius: 1vmin;
+  &:hover {
+    color: gray;
+    background-color: rgb(54, 143, 231);
+    color: white;
+  }
+}
+a {
+  text-decoration: none;
 }
