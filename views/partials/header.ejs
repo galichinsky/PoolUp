@@ -11,15 +11,16 @@
     <!-- Put links that you want to display at all times
          outside of the if/else 
     -->
-    <a href="/">💧</a>
+    <% if (user) %>
+    <a href="/pools">💧</a>
     <h1>PoolUp</h1>
     <div>
       <% if (user) { %>
-        <a href="/pools">All Pools</a>&nbsp;&nbsp;
-        <a href="/pools/new">Add Pool</a>&nbsp;&nbsp;
+        <!-- <a href="/pools">All Pools</a>&nbsp;&nbsp; -->
         <a href="/pools/user">My Pools</a>&nbsp;&nbsp;
+        <a href="/pools/new">Add Pool</a>&nbsp;&nbsp;
         <a href="/auth/logout">Log Out</a>&nbsp;&nbsp;
-        <span>💧<%= user.username %></span>
+        <span>💧 <%= user.username %></span>
       <% } else { %>
         <a href="/auth/sign-up">Sign Up</a>
         <a href="/auth/login">Log In</a>

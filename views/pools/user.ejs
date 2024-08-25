@@ -1,25 +1,32 @@
 <%- include('../partials/header.ejs') %>
 
-<h1>My Pools</h1>
+<h2>My Pools</h2>
 
-<div>
-<% if (pools.length) { %>
+<!-- <div> -->
+  <% if (pools.length) { %>
   <ul>
     <% pools.forEach((pool) => { %>
-    <li>
+      <li>
+      <form
+        action="/pools/<%= pool._id %>/?_method=DELETE"
+        method="POST"
+        class="delete-form">
+
+      
       <p>Name: <%= pool.name %></p>
       <p>Location: <%= pool.location %></p>
       <p>Event: <%= pool.event %></p>
       <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
-          <a href="/pools/user/edit">Edit Food</a>
-          <form action="/pools/<%= pool._id %>/?_method=DELETE" method="POST">
-              <button type="submit">❌</button>
-          </form>
+      
+        
+    </form>
+    <button type="submit">Edit</button>
+    <button type="submit">Delete</button>
     </li>
     <% }); %>
   </ul>
   <% } else { %>
   <h3>No Pools Yet</h3>
-  <% } %> 
-</div>
+  <% } %>
+<!-- </div> -->
 <%- include('../partials/footer.ejs') %>

@@ -1,84 +1,259 @@
+/* General Styles */
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-rows: 8vh 1fr 4vh;
+  grid-template-rows: auto 1fr auto;
+  background: linear-gradient(to bottom right, #e0f7fa, #a7ece4);
+  color: #0a1448;
 }
 
-nav, footer {
-  background-color:rgb(167, 236, 228);
+nav {
+  background-color: #00796b;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2vmin;
-  font-size: 2vh;
-  color: rgb(11, 11, 11);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-  /* font-size: 2vh; */
+  font-size: 1rem;
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  background-color: white;
-  padding: 1vmin;
-  border-radius: 1vmin;
-  &:hover {
-    color: gray;
-    background-color: rgb(54, 143, 231);
-    color: white;
-  }
+  color: #fff;
+  background-color: #004d40;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
+nav a:hover {
+  background-color: #004d40;
+}
+nav h1 {
+  color: black;
+}
 nav span {
-  font-size: 1.5vmin;
-  color: rgb(0, 0, 0);
+  color: #85def5;
 }
 
+footer {
+  background-color: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Page Container */
 main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main h2 {
+  text-align: center;
+  padding-bottom: 5%;
+  color: black;
+}
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #004d40;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.cta-button {
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #00796b;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004d40;
+}
+
+/* Form and Buttons */
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5vmin;
 }
 
-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 2vmin;
+form label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #004d40;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%;
 }
 
-form * {
-  font-size: 2vmin;
-  padding: 1vmin;
-  border-radius: 1vmin;
-  text-decoration: none;
+form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-form button[type='submit'] {
-  grid-column: span 2;
+form input:focus {
+  border-color: #00796b;
+}
+
+button {
+  background-color: #00796b;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: lightslategray;
-  color: white;
+  background-color: #004d40;
 }
-button {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  background-color: white;
-  padding: 1vmin;
-  border-radius: 1vmin;
-  &:hover {
-    color: gray;
-    background-color: rgb(54, 143, 231);
-    color: white;
-  }
+
+/* Pool List */
+ul {
+  color:
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: auto;
 }
-a {
+
+li {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+li p {
+  margin: 0.5rem 0;
+}
+
+li a {
+  background-color: #00796b;
+  color: #fff;
+  padding: 0.5rem 1rem;
   text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+li a:hover {
+  background-color: #004d40;
+}
+
+li form {
+  display: inline;
+}
+
+li button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #004d40;
+  text-align: center;
+}
+
+/* Form styling */
+.delete-form {
+  display: inline; /* Ensure the form doesn't take up full width */
+  margin: 0; /* Remove default margin */
+}
+
+/* Button styling */
+.delete-button {
+  background-color: #f44336; /* Red color */
+  color: #fff; /* White text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.delete-button:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.5); /* Add a custom focus outline */
 }
