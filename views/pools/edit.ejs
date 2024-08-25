@@ -8,7 +8,7 @@
 <body>
     <%- include('../partials/header') %>
     <h1>Edit Pool Review</h1>
-    <form action="/pools?_method=PUT" method="POST">
+    <form action="/:poolId/?_method=PUT" method="POST">
 
         <label for="name">Pool Name:</label>
         <input type="text" name="name" id="name" />
