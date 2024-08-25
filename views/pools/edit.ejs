@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,23 +6,21 @@
 </head>
 <body>
     <%- include('../partials/header') %>
-    <h1>Edit Pool Review</h1>
-    <form action="/:poolId/?_method=PUT" method="POST">
-
+    <h2>Edit Your Pool Review</h2>
+    <form action="/pools/<%= pool._id %>?_method=PUT" method="POST">
         <label for="name">Pool Name:</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" value="<%= pool.name %>"/>
         <label for="event">Event:</label>
-        <input type="text" name="event" id="event" />
+        <input type="text" name="event" id="event" value="<%= pool.event %>"/>
         <label for="date">Start Date:</label>
-        <input type="date" name="date" id="date" />
+        <input type="date" name="date" id="date" value="<%= pool.date %>"/>
         <label for="location">Pool Location:</label>
-        <input type="text" name="location" id="location" />
+        <input type="text" name="location" id="location" value="<%= pool.location %>"/>
         <label for="review">Review:</label>
-        <textarea name="review" id="review"></textarea>  
-        
-        <button type="submit">Save</button>
-     </form>
-    <a href="/pools/user">Back to Your Pantry</a>
+        <textarea name="review" id="review" value="<%= pool.review %>"></textarea>  
+        <button type="submit">Update</button>
+    
+    </form>
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>

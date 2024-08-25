@@ -19,9 +19,10 @@
       <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
       
         
+      <a href="/pools/<%= pool._id %>/edit">Edit</a>
+      
+      <button type="submit">Delete</button>
     </form>
-    <button type="submit">Edit</button>
-    <button type="submit">Delete</button>
     </li>
     <% }); %>
   </ul>
