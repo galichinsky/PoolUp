@@ -42,18 +42,23 @@ router.delete('/:poolId', async (req, res) => {
   // res.send('Pool deleted')
 })
 
-// PUT /:poolId (Show Edit functionality)
+// PUT /:poolId/edit (Show Edit functionality)
 router.get('/:poolId/edit', async (req, res) => {
   req.body.user = req.user._id;
   const pool = await Pool.findById(req.params.poolId)
   res.render('pools/edit.ejs', { pool })
 })
 
-// PUT /:poolId (Show Edit functionality)
-// router.get('/:poolId/edit', async (req, res) => {
-//   req.body.user = req.user._id;
-//   const pool = await Pool.findById(req.params.poolId)
-//   res.render('pools/edit.ejs', { pool })
-// })
+// PUT /:poolId (Update functionality)
+router.put('/:poolId', async (req, res) => {
+  try {
+  req.body.user = req.user._id;
+  await Pool.findByIdAndUpdate(req.params.poolId, req.body);
+  res.redirect('/pools/user')
+} catch (err) {
+  console.error(err);
+  res.redirect(`/:poolId/edit`)
+}
+})
 
 module.exports = router;

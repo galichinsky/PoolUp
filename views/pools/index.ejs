@@ -6,10 +6,14 @@
   <ul>
     <% pools.forEach((pool) => { %>
     <li>
-      <p>Name: <%= pool.name %></p>
-      <p>Location: <%= pool.location %></p>
-      <p>Event: <%= pool.event %></p>
-      <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
+      <p><%= pool.name %></p>
+      <p><%= pool.location %></p>
+      <p><%= pool.event %></p>
+      <% if (pool.date) { %>
+        <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
+      <% } else { %>
+        <p>Event Date: Not specified</p>
+      <% } %>
       <% if (user._id.equals(pool.user)) { %>
        <p></p>
       <% } %>

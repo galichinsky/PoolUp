@@ -11,17 +11,18 @@
         action="/pools/<%= pool._id %>/?_method=DELETE"
         method="POST"
         class="delete-form">
-
-      
       <p>Name: <%= pool.name %></p>
       <p>Location: <%= pool.location %></p>
       <p>Event: <%= pool.event %></p>
-      <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
-      
-        
-      <a href="/pools/<%= pool._id %>/edit">Edit</a>
-      
-      <button type="submit">Delete</button>
+      <% if (pool.date) { %>
+        <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
+      <% } else { %>
+        <p>Event Date: Not specified</p>
+      <% } %>
+      <p>Review: <%= pool.review %></p>
+      <button type="submit">Delete</button>&nbsp;
+      <br>
+      <a href="/pools/<%= pool._id %>/edit">Edit Pool</a>
     </form>
     </li>
     <% }); %>
