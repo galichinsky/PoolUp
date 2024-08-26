@@ -4,9 +4,9 @@
 
 <!-- <div> -->
   <% if (pools.length) { %>
-  <ul>
+  
     <% pools.forEach((pool) => { %>
-      <li>
+      <li class="my-pools">
       <form
         action="/pools/<%= pool._id %>/?_method=DELETE"
         method="POST"
@@ -20,13 +20,13 @@
         <p>Event Date: Not specified</p>
       <% } %>
       <p>Review: <%= pool.review %></p>
-      <button type="submit">Delete</button>&nbsp;
-      <br>
       <a href="/pools/<%= pool._id %>/edit">Edit Pool</a>
+      <br>
+      <button type="submit">Delete</button>&nbsp;
     </form>
     </li>
     <% }); %>
-  </ul>
+  
   <% } else { %>
   <h3>No Pools Yet</h3>
   <% } %>

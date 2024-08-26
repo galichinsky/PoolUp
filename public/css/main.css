@@ -12,6 +12,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   background: linear-gradient(to bottom right, #e0f7fa, #a7ece4);
+  background-image: url(../assets/waveyBG.png);
+  background-repeat: no-repeat;
+  background-size:inherit;
   color: #0a1448;
 }
 
@@ -41,6 +44,8 @@ nav h1 {
   color: rgb(255, 255, 255);
   text-decoration: underline;
   text-decoration-color: #53b6ec;
+  padding-right: 15rem;
+  padding-left: 1vmin;
 }
 nav span {
   color: #6cc1ef;
@@ -118,9 +123,9 @@ main h2 {
 /* Form and Buttons */
 form {
   background-color: white;
-  padding: 2rem;
+  padding: 1.2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
   margin: auto;
@@ -161,7 +166,7 @@ button {
   cursor: pointer;
   font-size: 1.25rem;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: -.5rem;
   transition: background-color 0.3s ease;
 }
 
@@ -171,9 +176,9 @@ button:hover {
 
 /* Pool List */
 ul {
-  color:
+  color: rgb(0, 0, 0);
   list-style: none;
-  padding: 0;
+  padding: 0.5rem;
   max-width: 800px;
   margin: auto;
 }
@@ -183,10 +188,14 @@ li {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.my-pools {
+  padding: 0rem;
 }
 
 li p {
@@ -199,10 +208,11 @@ li a {
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 8px;
-  display: inline-block;
-  margin-right: 1rem;
+  display: grid;
+  text-align: center;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
 
 li a:hover {
@@ -226,6 +236,10 @@ li button {
 
 li button:hover {
   background-color: #d32f2f;
+}
+
+li a {
+  grid-column: width 2;
 }
 
 h3 {
