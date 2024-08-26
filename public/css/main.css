@@ -76,6 +76,11 @@ main {
   max-width: 1200px;
   margin: auto;
 }
+main h1 {
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+}
 
 main h2 {
   text-align: center;
@@ -108,7 +113,7 @@ main h2 {
 .cta-button {
   font-size: 1.25rem;
   color: #fff;
-  background-color: #;
+  background-color: #004d9b;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -203,7 +208,7 @@ li p {
 }
 
 li a {
-  background-color: #00796b;
+  background-color: #0269d0;
   color: #fff;
   padding: 0.5rem 1rem;
   text-decoration: none;
