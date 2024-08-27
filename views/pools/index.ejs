@@ -1,11 +1,11 @@
 <%- include('../partials/header.ejs') %>
 <h2>All Pools</h2>
 
-
+<div class="pools-container">
 <% if (pools.length) { %>
   <ul>
     <% pools.forEach((pool) => { %>
-    <li>
+    <li class="'pool-item">
       <p><b>Name:</b> <%= pool.name %> </p>
       <p><b>Rating:</b> <%= pool.rating %></p>
       <p><b>Location:</b> <%= pool.location %></p>
@@ -18,11 +18,12 @@
           <% if (user._id.equals(pool.user)) { %>
             <p></p>
             <% } %>
-        <p><b>Athlete/Spectator Experience:</b> <%= pool.review %></p>
+        <p><b>Athlete/Spectator Experience:</b><br> <%= pool.review %></p>
     </li>
     <% }); %>
   </ul>
   <% } else { %>
   <h3>No Pools Yet</h3>
   <% } %> 
+</div>
 <%- include('../partials/footer.ejs') %>
