@@ -17,7 +17,9 @@
         <label for="location">Pool Location:</label>
         <input type="text" name="location" id="location" value="<%= pool.location %>"/>
         <label for="rating">Rating:</label>
-        <select name="rating" id="rating">
+        <select name="rating" id="rating" value="<%= pool.rating %>">
+            
+            <option value=""><%= pool.rating %></option>
             <option value="🏊🏼🏊🏼🏊🏼🏊🏼🏊🏼">🏊🏼🏊🏼🏊🏼🏊🏼🏊🏼</option>
             <option value="🏊🏼🏊🏼🏊🏼🏊🏼">🏊🏼🏊🏼🏊🏼🏊🏼</option>
             <option value="🏊🏼🏊🏼🏊🏼">🏊🏼🏊🏼🏊🏼</option>
@@ -25,7 +27,7 @@
             <option value="🏊🏼">🏊🏼</option>
         </select>
         <label for="review">Review:</label>
-        <textarea name="review" id="review" rows="5" cols="40" value="<%= pool.name %>"></textarea> 
+        <textarea name="review" id="review" rows="5" cols="40"><%= pool.review %></textarea> 
         <br> 
         <button type="submit">Update</button>
     

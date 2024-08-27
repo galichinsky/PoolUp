@@ -7,28 +7,27 @@
   
     <% pools.forEach((pool) => { %>
       <li class="my-pools">
-      <form
-        action="/pools/<%= pool._id %>/?_method=DELETE"
-        method="POST"
-        class="delete-form">
-      <p>Name: <%= pool.name %> <%= pool.rating %></p>
-      <p>Location: <%= pool.location %></p>
-      <p>Event: <%= pool.event %></p>
+      </form>
+      <p><b>Name:</b> <%= pool.name %> <%= pool.rating %></p>
+      <p><b>Location:</b> <%= pool.location %></p>
+      <p><b>Event:</b> <%= pool.event %></p>
       <% if (pool.date) { %>
-        <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
-      <% } else { %>
-        <p>Event Date: Not specified</p>
-      <% } %>
-      <p>Review: <%= pool.review %></p>
-      <a href="/pools/<%= pool._id %>/edit">Edit</a>
-      <br>
-      <button type="submit">Delete</button>&nbsp;
-    </form>
-    </li>
-    <% }); %>
+        <p><b>Event Date:</b> <%= pool.date.toLocaleDateString() %></p>
+        <% } else { %>
+          <p><b>Event Date:</b> Not specified</p>
+          <% } %>
+          <p><b>Athlete/Spectator Experience:</b> <%= pool.review %></p>
+          <form
+          action="/pools/<%= pool._id %>/?_method=DELETE"
+          method="POST"
+          class="delete-form">
+          <a href="/pools/<%= pool._id %>/edit">Edit</a>
+          <button type="submit">Delete</button>&nbsp;
+        </li>
+        <% }); %>
+      </div>
   
   <% } else { %>
   <h3>No Pools Yet</h3>
   <% } %>
-</div>
 <%- include('../partials/footer.ejs') %>
