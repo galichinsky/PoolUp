@@ -1,10 +1,28 @@
-<%- include('./partials/header.ejs') %>
-
-<h1>Welcome to the PoolUp app!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoolUp</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav>
+    <!-- Put links that you want to display at all times
+         outside of the if/else 
+    -->
+    <a href="/pools">💧</a>
+    <h1>PoolUp</h1>
+    
+  </nav>
+  <main>
+<div class="landing">
+  <h2>Welcome to the PoolUp app!</h2>
 <section id="hero">
   <h1>Discover and Review the Best Competitive Pools</h1>
   <p>Find, manage, and review pools with ease.</p>
   <a href="/auth/sign-up" class="cta-button">Get Started</a> or
   <a href="/auth/login" class="cta-button">Log In</a>
 </section>
+</div>
 <%- include('./partials/footer.ejs') %>
