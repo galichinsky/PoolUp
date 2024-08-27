@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
-  <nav>
-    <a href="/">💧</a>
-  </nav>
-  <main>
+<%- include('./partials/header.ejs') %>
 
-<h1>Welcome to  the PoolUp app!</h1>
-
+<h1>Welcome to the PoolUp app!</h1>
 <section id="hero">
   <h1>Discover and Review the Best Competitive Pools</h1>
   <p>Find, manage, and review pools with ease.</p>
-  <a href="/auth/sign-up" class="cta-button">Get Started</a> or <a href="/auth/login" class="cta-button">Log In</a> 
+  <a href="/auth/sign-up" class="cta-button">Get Started</a> or
+  <a href="/auth/login" class="cta-button">Log In</a>
 </section>
-
 <%- include('./partials/footer.ejs') %>

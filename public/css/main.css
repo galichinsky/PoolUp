@@ -280,3 +280,9 @@ h3 {
   outline: none; /* Remove the default focus outline */
   box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.5); /* Add a custom focus outline */
 }
+
+select#rating {
+  font-size: larger;
+  align-self: start;
+  margin-bottom: 1em;
+}

@@ -1,22 +1,24 @@
 <%- include('../partials/header.ejs') %>
-
 <h2>All Pools</h2>
+
 
 <% if (pools.length) { %>
   <ul>
     <% pools.forEach((pool) => { %>
     <li>
-      <p><%= pool.name %></p>
-      <p><%= pool.location %></p>
-      <p><%= pool.event %></p>
+      <p><b>Name:</b> <%= pool.name %> </p>
+      <p><b>Rating:</b> <%= pool.rating %></p>
+      <p><b>Location:</b> <%= pool.location %></p>
+      <p><b>Event:</b> <%= pool.event %></p>
       <% if (pool.date) { %>
-        <p>Event Date: <%= pool.date.toLocaleDateString() %></p>
-      <% } else { %>
-        <p>Event Date: Not specified</p>
-      <% } %>
-      <% if (user._id.equals(pool.user)) { %>
-       <p></p>
-      <% } %>
+        <p><b>Event Date:</b> <%= pool.date.toLocaleDateString() %></p>
+        <% } else { %>
+          <p><b>Event Date:</b> Not specified</p>
+          <% } %>
+          <% if (user._id.equals(pool.user)) { %>
+            <p></p>
+            <% } %>
+        <p><b>Athlete/Spectator Experience:</b> <%= pool.review %></p>
     </li>
     <% }); %>
   </ul>

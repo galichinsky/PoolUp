@@ -16,11 +16,21 @@
         <input type="text" name="event" id="event" />
         <label for="date">Start Date:</label>
         <input type="date" name="date" id="date" />
-        <label for="location">Pool Location:</label>
+        <label for="location">Location:</label>
         <input type="text" name="location" id="location" />
-        <label for="review">Review:</label>
-        <textarea name="review" id="review"></textarea>
-        <br>  
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="🏊🏼🏊🏼🏊🏼🏊🏼🏊🏼">🏊🏼🏊🏼🏊🏼🏊🏼🏊🏼</option>
+            <option value="🏊🏼🏊🏼🏊🏼🏊🏼">🏊🏼🏊🏼🏊🏼🏊🏼</option>
+            <option value="🏊🏼🏊🏼🏊🏼">🏊🏼🏊🏼🏊🏼</option>
+            <option value="🏊🏼🏊🏼">🏊🏼🏊🏼</option>
+            <option value="🏊🏼">🏊🏼</option>
+        </select>
+        <br>
+        <label for="review">Athlete/Spectator Experience:</label>
+        <textarea name="review" id="review" rows="5" cols="40"></textarea>
+        <br>
+        
         <button type="submit">Add Pool</button>
     
     </form>

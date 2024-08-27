@@ -5,13 +5,13 @@ const Pool = (require("../models/pool.js"));
 
 // GET /pools (index functionality/action)
 router.get('/', ensureLoggedIn, async (req, res) => {
-  const pools = await Pool.find({})
-  res.render("pools/index.ejs", { pools })
+  const pools = await Pool.find({}).sort('-createdAt').populate('user');
+  res.render("pools/index.ejs", { pools });
 })
 
 // GET /pools/user (my pools functionality/action)
 router.get('/user', ensureLoggedIn, async (req, res) => {
-  const pools = await Pool.find({user: req.user._id})
+  const pools = await Pool.find({user: req.user._id}).sort('-createdAt').populate('user');
   res.render("pools/user.ejs", { pools })
 })
 

@@ -22,11 +22,19 @@ const poolSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  rating: {
+    type: String,
+    enum: ['🏊🏼🏊🏼🏊🏼🏊🏼🏊🏼', '🏊🏼🏊🏼🏊🏼🏊🏼', '🏊🏼🏊🏼🏊🏼', '🏊🏼🏊🏼', '🏊🏼'],
+    required: true,
+  },
   user: { 
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true,
   }
+
+}, {
+  timestamps: true,
 })
 
 const Pool = mongoose.model("Pool", poolSchema);
