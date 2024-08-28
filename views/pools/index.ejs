@@ -5,7 +5,9 @@
 <% if (pools.length) { %>
   <ul>
     <% pools.forEach((pool) => { %>
-    <li class="'pool-item">
+    <li class="pool-item">
+      
+      <p><b>Creator:</b> <%= pool.user.username %> </p>
       <p><b>Name:</b> <%= pool.name %> </p>
       <p><b>Rating:</b> <%= pool.rating %></p>
       <p><b>Location:</b> <%= pool.location %></p>

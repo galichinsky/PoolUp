@@ -12,15 +12,15 @@ const poolSchema = new mongoose.Schema({
   },
   date: {
     type: Date, default: () => Date.now(),
-    required: false,
+    required: true,
   },
   location: {
     type: String,
-    required: false,
+    required: true,
   },
   review: {
     type: String,
-    required: false,
+    required: true,
   },
   rating: {
     type: String,

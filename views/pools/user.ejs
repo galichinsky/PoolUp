@@ -8,7 +8,8 @@
     <% pools.forEach((pool) => { %>
       <li class="my-pools">
       </form>
-      <p><b>Name:</b> <%= pool.name %> <%= pool.rating %></p>
+      <p><b>Name:</b> <%= pool.name %></p>
+      <p><b>Rating:</b><%= pool.rating %></p>
       <p><b>Location:</b> <%= pool.location %></p>
       <p><b>Event:</b> <%= pool.event %></p>
       <% if (pool.date) { %>
