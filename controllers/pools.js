@@ -15,8 +15,7 @@ router.get('/user', ensureLoggedIn, async (req, res) => {
   res.render("pools/user.ejs", { pools })
 })
 
-
-// GET /pools/new
+// GET /pools/new (show functionality)
 router.get('/new', ensureLoggedIn, (req, res) => {
   console.log((req.params.userId));
   res.render('pools/new.ejs');
@@ -34,7 +33,7 @@ router.post('/', async (req, res) => {
   res.redirect('/pools')
 })
 
-// DELETE /
+// DELETE
 router.delete('/:poolId', async (req, res) => {
   req.body.user = req.user._id;
   await Pool.findByIdAndDelete(req.params.poolId);

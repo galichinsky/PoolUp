@@ -9,7 +9,6 @@
     <%- include('../partials/header') %>
     <h2>Create a New Pool Review</h2>
     <form action="/pools" method="POST">
-
         <label for="name">Pool Name:</label>
         <input type="text" name="name" id="name" />
         <label for="event">Event:</label>
@@ -30,9 +29,7 @@
         <label for="review">Athlete/Spectator Experience:</label>
         <textarea name="review" id="review" rows="5" cols="40"></textarea>
         <br>
-        
         <button type="submit">Add Pool</button>
-    
     </form>
     <%- include('../partials/footer.ejs') %>
 </body>

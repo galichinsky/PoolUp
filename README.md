@@ -22,16 +22,15 @@ Welcome to ***PoolUp!*** 🌊 An innovative application designed to help users r
 - [Technologies Used](#technologies-used)
 - [Contact](#contact)
 
-## Planning
-[PoolUp Trello Board](https://trello.com/b/6dP1H0e2/poolup)
-
 ## Features
-
 - **User Authentication**: Secure sign-up and login functionality for a personalized experience.
 - **Add Pools**: Effortlessly add new pools with details such as name, location, event association, date, rating, and user experience.
 - **Browse Pools**: Discover and explore pool experiences shared by other users.
 - **Edit and Delete Reviews**: Manage your own pool reviews with the option to edit or delete them anytime.
 - **Dynamic Rendering**: Enjoy a visually appealing layout where pool reviews are displayed in multiple rows using a responsive flexbox design.
+
+## Planning
+[PoolUp Trello Board](https://trello.com/b/6dP1H0e2/poolup)
 
 ## Live Demo
 Try out the application here: [PoolUp by Gregory Lichinsky](https://poolup-00a9691ded07.herokuapp.com/)
