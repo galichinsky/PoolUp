@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PoolUp</title>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="icon" href="/public/assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/drop2.png" type="image/x-icon"/>
 </head>
 <body>
   <nav>
-    <!-- Put links that you want to display at all times
-         outside of the if/else 
-    -->
     <% if (user) %>
     <a href="/pools">💧</a>
     <h1>PoolUp</h1>
     <div>
       <% if (user) { %>
-        <!-- <a href="/pools">All Pools</a>&nbsp;&nbsp; -->
         <a href="/pools/user">My Pools</a>&nbsp;&nbsp;
         <a href="/pools/new">Add Pool</a>&nbsp;&nbsp;
         <a href="/auth/logout">Log Out</a>&nbsp;&nbsp;
-        <span>💧 <%= user.username %></span>
+        🏊‍♂️ <span> <%= user.username %></span>
       <% } else { %>
         <a href="/auth/sign-up">Sign Up</a>
         <a href="/auth/login">Log In</a>
